@@ -17,32 +17,8 @@ def main():
         game.update()
 
 
-        
-        
-
-
 
     game.destroy()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
