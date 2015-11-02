@@ -8,7 +8,8 @@ def main():
     while not game.gameOverBool:
      
         keys = game.getKey()
-        
+
+
         player.move(keys)
         
         game.draw(player)
