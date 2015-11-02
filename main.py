@@ -8,14 +8,15 @@ def main():
     game.create()
     player = imports.person.Person("spritePlayer.png")
 
+    map1 = map.Map()
+    #Se da lo largo del mapa
+    map1.create(20)
+
     while not game.gameOverBool:
      
         keys = game.getKey()
 
         player.move(keys)
-
-        map1 = map.Map()
-        map1.create(2)
 
         game.drawMap(map1)
 
