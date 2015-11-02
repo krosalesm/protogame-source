@@ -1,14 +1,15 @@
 import imports
 
+
 def main():
+
     game = imports.ini.Game()
     game.create()
-    player = imports.person.Person()
+    player = imports.person.Person("spritePlayer.png")
 
     while not game.gameOverBool:
      
         keys = game.getKey()
-
 
         player.move(keys)
         
@@ -16,11 +17,7 @@ def main():
         
         game.update()
 
-
-
     game.destroy()
 
-
-
-if __name__== "__main__":
+if __name__ == "__main__":
     main()

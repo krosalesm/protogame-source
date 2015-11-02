@@ -1,6 +1,8 @@
 import imports
 
+
 class Weapons:
+
     def __init__(self):
         self.chargeMax = 10
         self.bullets = 0

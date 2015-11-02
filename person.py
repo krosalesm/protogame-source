@@ -2,9 +2,10 @@ import imports
 import world
 SIZE = (32,32)
 class Person:
-    def __init__(self):
+    def __init__(self,img):
         self.pos = (0,0)
         self.size = SIZE
+        self.img = img
         self.acceleration = .001
         self.maxSpeed = 12
         self.speed = 1.2
@@ -13,7 +14,7 @@ class Person:
         self.health = 100
         self.rotation = 0 # Direccion ha donde esta volteando
         self.item = 0 #El item que tiene'
-        self.sprite = imports.pygame.image.load("resources\\sprites\\spritePlayer.png")
+        self.sprite = imports.pygame.image.load("resources\\sprites\\"+ self.img)
     def move(self,whereTo): #Le envie el movimiento que hizo en x,y
 
 #FALTA VER HACIA DONDE SE VA A DIRIJIR Y QUE FRENE CON LA GRAVEDAD
