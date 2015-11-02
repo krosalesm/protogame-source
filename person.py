@@ -13,7 +13,7 @@ class Person:
         self.health = 100
         self.rotation = 0 # Direccion ha donde esta volteando
         self.item = 0 #El item que tiene'
-        self.sprite = imports.pygame.image.load("C:\\Users\\Carlos\\Desktop\\protogame\\resources\\sprites\\spritePlayer.png")
+        self.sprite = imports.pygame.image.load("resources\\sprites\\spritePlayer.png")
     def move(self,whereTo): #Le envie el movimiento que hizo en x,y
 
 #FALTA VER HACIA DONDE SE VA A DIRIJIR Y QUE FRENE CON LA GRAVEDAD
