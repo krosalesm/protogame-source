@@ -23,6 +23,13 @@ class Game:
     def draw(self,player):
         self.gameDisplay.blit(player.sprite,player.pos)
 
+    def drawMap(self,mapa):
+        i = 0
+        for x in mapa.map:
+            self.gameDisplay.blit(mapa.imgWall,(32*i,0))
+            i +=1
+
+
     def gameOver(self):
         self.gameOverBool = True
 

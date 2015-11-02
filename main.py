@@ -1,4 +1,5 @@
 import imports
+import map
 
 
 def main():
@@ -12,7 +13,12 @@ def main():
         keys = game.getKey()
 
         player.move(keys)
-        
+
+        map1 = map.Map()
+        map1.create(2)
+
+        game.drawMap(map1)
+
         game.draw(player)
         
         game.update()
