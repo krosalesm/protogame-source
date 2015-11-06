@@ -8,8 +8,8 @@ def main():
     player = imports.person.Person("spritePlayer.png")
 
     map1 = map.Map()
-    #Se da lo largo del mapa
-    map1.create(20)
+
+    map1.create()
 
     while not game.gameOverBool:
      

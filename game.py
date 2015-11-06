@@ -26,10 +26,16 @@ class Game:
 
     def drawMap(self,mapa):
         i = 0
-        for x in mapa.map:
-            self.gameDisplay.blit(mapa.imgWall,(32*i,0))
-            i +=1
-
+        a = 0
+        for x in mapa.ourMap:
+            for y in x:
+                if y == 'x':
+                    self.gameDisplay.blit(mapa.imgWall,(mapa.size[0]*i,mapa.size[1]*a))
+                if y == 'y':
+                    self.gameDisplay.blit(mapa.imgFloor,(mapa.size[0]*i,mapa.size[1]*a))
+                i += 1
+            a +=1
+            i = 0
 
     def gameOver(self):
         self.gameOverBool = True
