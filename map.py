@@ -4,7 +4,7 @@ import pygame
 
 class Map:
     def __init__(self):
-        self.size = (16,16)
+        self.size = (32,32)
         self.map = list()
         self.imgWall = pygame.image.load("resources\\tiles\\wall.png")
         self.imgFloor = pygame.image.load("resources\\tiles\\floor.png")
