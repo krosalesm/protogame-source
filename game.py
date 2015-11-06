@@ -44,6 +44,9 @@ class Game:
                 if event.key == pygame.K_p:
                     self.gameOver()
 
+            if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                self.x,self.y = event.pos
+
                 # movimiento arriba,abajo,izq,derecha
             keys = pygame.key.get_pressed()
             if keys[pygame.K_w]:
