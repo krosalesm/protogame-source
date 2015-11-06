@@ -6,7 +6,7 @@ class Map:
     def __init__(self):
         self.size = (16,16)
         self.map = list()
-        self.imgWall = pygame.image.load("resources\\sprites\\wall.png")
+        self.imgWall = pygame.image.load("resources\\tiles\\wall.png")
         self.ourMap = list()
 
     def create(self):
