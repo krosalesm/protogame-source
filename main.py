@@ -1,7 +1,6 @@
 import imports
 import map
 
-
 def main():
 
     game = imports.ini.Game()

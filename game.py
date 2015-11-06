@@ -1,6 +1,7 @@
 import pygame
 import imports
 
+
 class Game:
     def __init__(self):
         pygame.init()
@@ -30,6 +31,8 @@ class Game:
             for y in x:
                 if y == 'x':
                     self.gameDisplay.blit(mapa.imgWall,(mapa.size[0]*i,mapa.size[1]*a))
+                if y == 'y':
+                    self.gameDisplay.blit(mapa.imgFloor,(mapa.size[0]*i,mapa.size[1]*a))
                 i += 1
             a +=1
             i = 0
@@ -47,30 +50,41 @@ class Game:
                 if event.key == pygame.K_p:
                     self.gameOver()
 
+            if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                self.x,self.y = event.pos
+
                 # movimiento arriba,abajo,izq,derecha
-                if event.key == pygame.K_d:
-                    self.lastDir = 3
-                if event.key == pygame.K_a:
-                    self.lastDir = 7
-                if event.key == pygame.K_w:
-                    self.lastDir = 1
-                if event.key == pygame.K_s:
-                    self.lastDir = 5
+            keys = pygame.key.get_pressed()
+            if keys[pygame.K_w]:
+                 self.lastDir = 1
+            if keys[pygame.K_a]:
+                 self.lastDir = 7
+            if keys[pygame.K_d]:
+                 self.lastDir = 3
+            if keys[pygame.K_s]:
+                 self.lastDir = 5
 
-                # movimiento diagonal
-                if event.key == pygame.K_e:
-                    self.lastDir = 2
-                if event.key == pygame.K_c:
-                    self.lastDir = 4
-                if event.key == pygame.K_z:
-                    self.lastDir = 6
-                if event.key == pygame.K_q:
-                    self.lastDir = 8
+            if keys[pygame.K_a] and keys[pygame.K_w]:
+                self.lastDir = 8
+            if keys[pygame.K_a] and keys[pygame.K_s]:
+                self.lastDir = 6
+            if keys[pygame.K_w] and keys[pygame.K_d]:
+                self.lastDir = 2
+            if keys[pygame.K_s] and keys[pygame.K_d]:
+                self.lastDir = 4
 
-            if event.type == pygame.KEYUP:
+            #if keys[pygame.none]:
+              # self.movement = False
+              # self.lastDir = 0
+
+            if not any(keys):
                 self.movement = False
                 self.lastDir = 0
-                
+
+            # if event.type == pygame.KEYUP:
+            #     self.movement = False
+            #     self.lastDir = 0
+
         return self.lastDir
 
         

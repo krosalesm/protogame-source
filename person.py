@@ -7,7 +7,7 @@ class Person:
         self.size = SIZE
         self.img = img
         self.acceleration = .001
-        self.maxSpeed = 12
+        self.maxSpeed = 8
         self.speed = 1.2
         self.speedDefault = 0.01
         self.speedNow = 0.1
