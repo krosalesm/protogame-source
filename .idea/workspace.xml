@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59b0a16c-ab18-4433-9d9b-aa4e6dbda4ea" name="Default" comment="">
-<<<<<<< HEAD
+
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music.py" afterPath="$PROJECT_DIR$/music.py" />
-=======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/tiles/floor.png" afterPath="$PROJECT_DIR$/resources/tiles/floor.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/tiles/wall.png" afterPath="$PROJECT_DIR$/resources/tiles/wall.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ProtoSOurce.iml" afterPath="$PROJECT_DIR$/.idea/ProtoSOurce.iml" />

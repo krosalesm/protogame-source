@@ -15,6 +15,7 @@ class Person:
         self.rotation = 0 # Direccion ha donde esta volteando
         self.item = 0 #El item que tiene'
         self.sprite = imports.pygame.image.load("resources\\sprites\\"+ self.img)
+        self.persuit = False
     def move(self,whereTo): #Le envie el movimiento que hizo en x,y
 
 #FALTA VER HACIA DONDE SE VA A DIRIJIR Y QUE FRENE CON LA GRAVEDAD

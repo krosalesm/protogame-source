@@ -1,5 +1,6 @@
 import imports
 import map
+import music
 
 def main():
 
@@ -7,6 +8,8 @@ def main():
     game.create()
     player = imports.person.Person("spritePlayer.png")
 
+    musica = music.Music()
+    musica.playSong()
     map1 = map.Map()
 
     map1.create()
