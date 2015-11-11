@@ -10,6 +10,7 @@ class Game:
         self.TITLE = 'Protogame'
         self.displayDimension = (self.displayWidth,self.displayHeight)
         self.gameDisplay = pygame.display.set_mode(self.displayDimension)#(),pygame.FULLSCREEN #pygame.display.Info().current_w,pygame.display.Info().current_h
+        self.screen = pygame.Surface((1000,1000))
         self.gameOverBool = False
         self.movement = False #Muestra si se dejo de presionar la tecla
         self.lastDir = 0 #Guarda la ultima posicion a la que iba
@@ -18,11 +19,13 @@ class Game:
 
 		
     def update(self):
+        self.gameDisplay.blit(self.screen,(0,0))
+
         pygame.display.update()
         self.gameDisplay.fill(imports.BLACK)
 
     def draw(self,player):
-        self.gameDisplay.blit(player.sprite,player.pos)
+        self.screen.blit(player.sprite,player.pos)
 
     def drawMap(self,mapa):
         i = 0
@@ -30,9 +33,9 @@ class Game:
         for x in mapa.ourMap:
             for y in x:
                 if y == 'x':
-                    self.gameDisplay.blit(mapa.imgWall,(mapa.size[0]*i,mapa.size[1]*a))
+                    self.screen.blit(mapa.imgWall,(mapa.size[0]*i,mapa.size[1]*a))
                 if y == 'y':
-                    self.gameDisplay.blit(mapa.imgFloor,(mapa.size[0]*i,mapa.size[1]*a))
+                    self.screen.blit(mapa.imgFloor,(mapa.size[0]*i,mapa.size[1]*a))
                 i += 1
             a +=1
             i = 0
